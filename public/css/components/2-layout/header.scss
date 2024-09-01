@@ -1,0 +1,127 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 296px);
+  padding: 15px 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaecf0;
+  background-color: $white;
+  z-index: 10;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+    &-ai {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      border: 1px solid $white;
+      box-shadow: 0px 1px 3px rgba(25, 33, 61, 0.1);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-right: 16px;
+      color: $primary;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+        transition: 0.3s ease;
+      }
+    }
+    &-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      border: 1px solid $white;
+      box-shadow: 0px 1px 3px rgba(25, 33, 61, 0.1);
+      border-radius: 8px;
+      padding: 8px;
+      margin-right: 16px;
+      color: $primary;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+      svg {
+        width: 14px;
+        height: 14px;
+        transition: 0.3s ease;
+      }
+    }
+    h1,
+    h2 {
+      margin-right: 16px;
+    }
+  }
+}
+// 1380px
+@mixin header-xxxlg-xxxxlg {
+  .header {
+    width: calc(100% - 260px);
+  }
+}
+// 1250px
+@mixin header-xlg-xxlg-extra {
+  .header {
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    width: 100%;
+    &__inner {
+      height: 41px;
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+  }
+}
+// 930px
+@mixin header-md-lg {
+  .header {
+  }
+}
+// 750px
+@mixin header-sm-md {
+  .header {
+    .search {
+      display: none;
+    }
+  }
+}
+// 650px
+@mixin header-sm-md-extra {
+  .header {
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    .profile {
+      display: none;
+    }
+  }
+}
+// 440px
+@mixin header-xxsm-xsm {
+  .header {
+  }
+}

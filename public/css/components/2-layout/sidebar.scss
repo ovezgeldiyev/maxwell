@@ -1,0 +1,222 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 296px;
+  height: 100%;
+  background-color: $white;
+  border-right: 1px solid #eaecf0;
+  box-sizing: border-box;
+  z-index: 10;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 24px 16px 16px 16px;
+    box-sizing: border-box;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 13px 12px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+    &.active {
+      background-color: $primary;
+      color: $white;
+      font-weight: 500;
+    }
+    > svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.burger {
+  display: none;
+}
+// 1380px
+@mixin sidebar-xxxlg-xxxxlg {
+  .sidebar {
+    width: 260px;
+  }
+}
+// 1250px
+@mixin sidebar-xlg-xxlg-extra {
+  .sidebar {
+  }
+}
+// 1180px
+@mixin sidebar-xlg-xxlg {
+  .sidebar {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 72px);
+    z-index: 9;
+    background: rgba($color: #000000, $alpha: 0.4);
+    transform: translateX(-100%);
+    @include transition;
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      background-color: $white;
+    }
+    &.active {
+      @include transformReset;
+    }
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    @include transition;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &::before {
+      top: 20%;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 50%;
+      @include transformX;
+    }
+    span {
+      top: 50%;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      position: absolute;
+      left: 50%;
+      @include transform;
+      @include transition;
+    }
+    &::after {
+      bottom: 20%;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 50%;
+      @include transformX;
+    }
+    &.active {
+      &::before {
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &::after {
+        bottom: 50%;
+        -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+        transform: translate(-50%, 50%) rotate(-45deg);
+      }
+    }
+  }
+}
+// 1024px
+@mixin sidebar-lg-xlg {
+  .sidebar {
+  }
+}
+// 930px
+@mixin sidebar-md-lg {
+  .sidebar {
+  }
+}
+// 750px
+@mixin sidebar-sm-md {
+  .sidebar {
+  }
+}
+// 650px
+@mixin sidebar-sm-md-extra {
+  .sidebar {
+  }
+}
+// 540px
+@mixin sidebar-xsm-sm {
+  .sidebar {
+  }
+  .burger {
+    margin: 0;
+  }
+}
+// 440px
+@mixin sidebar-xxsm-xsm {
+  .sidebar {
+  }
+}

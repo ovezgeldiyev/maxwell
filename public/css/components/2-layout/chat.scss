@@ -1,0 +1,234 @@
+.chat {
+  width: calc(100% - 280px);
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  box-sizing: border-box;
+  position: relative;
+  height: calc(100vh - 126px);
+  &.big {
+    width: 100%;
+  }
+  &__head {
+    background-color: #ecf5ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    height: 66px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    &-title {
+      display: flex;
+      align-items: center;
+    }
+    &-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      color: #19213d;
+      background: #ffffff;
+      border: 0.6px solid #d0d5dd;
+      border-radius: 4px;
+      padding: 6px;
+      margin-left: 12px;
+    }
+  }
+  &__body {
+    height: calc(100vh - 194px);
+    overflow-y: scroll;
+    padding: 82px 16px 16px 16px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &Prompt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 16px;
+    background-color: $white;
+    &__inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 8px 16px;
+      background: #ffffff;
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+      box-sizing: border-box;
+      position: relative;
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      hr {
+        width: 2px;
+        height: 30px;
+        margin: 0 16px;
+        background-color: #f0f2f5;
+      }
+    }
+    &__tools {
+      display: flex;
+      align-items: center;
+      button {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666f8d;
+        background-color: unset;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-right: 12px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          color: $textColor;
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-family: $mainFont;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $textColor;
+      padding: 18px 310px 18px 16px;
+      box-sizing: border-box;
+      background-color: unset;
+      &::placeholder {
+        color: #a1a0a0;
+      }
+    }
+    .button {
+      font-weight: 500;
+      box-shadow: 0px 2px 5px rgba(20, 88, 201, 0.17),
+        inset 0px -2px 0.3px rgba(14, 56, 125, 0.18),
+        inset 0px 2px 1px rgba(255, 255, 255, 0.22);
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin chat-xxxlg-xxxxlg {
+  .chat {
+    &__body {
+      height: calc(100vh - 178px);
+    }
+  }
+}
+// 1250px
+@mixin chat-xlg-xxlg-extra {
+  .chat {
+  }
+}
+// 1180px
+@mixin chat-xlg-xxlg {
+  .chat {
+  }
+}
+// 1024px
+@mixin chat-lg-xlg {
+  .chat {
+  }
+}
+// 930px
+@mixin chat-md-lg {
+  .chat {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+// 750px
+@mixin chat-sm-md {
+  .chat {
+  }
+}
+// 650px
+@mixin chat-sm-md-extra {
+  .chat {
+  }
+}
+// 540px
+@mixin chat-xsm-sm {
+  .chat {
+    &__head {
+      &-tag {
+        display: none;
+      }
+    }
+    &Prompt {
+      &__inner {
+        padding: 6px 8px;
+      }
+      &__buttons {
+        hr {
+          width: 1px;
+          height: 24px;
+          margin: 0 10px;
+        }
+      }
+      &__tools {
+        button {
+          width: 14px;
+          height: 14px;
+          margin-right: 8px;
+        }
+      }
+      .button {
+        padding: 12px;
+        span {
+          display: none;
+        }
+        svg {
+          width: 12px;
+          height: 12px;
+          margin: 0;
+        }
+      }
+      input {
+        padding: 14px 156px 14px 14px;
+      }
+    }
+  }
+}
+// 440px
+@mixin chat-xxsm-xsm {
+  .chat {
+  }
+}

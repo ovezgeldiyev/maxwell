@@ -1,0 +1,175 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  .main {
+    padding: 90px 18px 20px 18px;
+    width: calc(100vw - 260px);
+  }
+  @include header-xxxlg-xxxxlg;
+  @include sidebar-xxxlg-xxxxlg;
+  @include alerts-xxxlg-xxxxlg;
+  @include assistant-xxxlg-xxxxlg;
+  @include chat-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    &__info {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &__buttons {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  // @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  h3 {
+    font-size: 28px;
+    line-height: 120%;
+  }
+  .main {
+    width: 100%;
+  }
+  .search {
+    width: 240px;
+  }
+  body {
+    &.active {
+      overflow: hidden;
+    }
+  }
+  @include header-xlg-xxlg;
+  @include sidebar-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  // @include hero-lg-xlg;
+}
+// 930px
+@include md-lg {
+  @include alerts-md-lg;
+  @include assistant-md-lg;
+  @include chat-md-lg;
+}
+// 750px
+@include sm-md {
+  h3 {
+    font-size: 20px;
+  }
+  .table {
+    &.rep {
+      tr {
+        td {
+          height: 40px;
+        }
+      }
+    }
+    &__wrapper {
+      margin-bottom: 16px;
+    }
+    tr {
+      td,
+      th {
+        font-size: 10px;
+        padding: 8px;
+        a {
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .pagination {
+    &__select {
+      padding: 8px;
+      width: 45px;
+      select {
+        padding: 8px;
+      }
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+  .message {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    &.ai {
+      padding: 16px;
+      flex-direction: column;
+      .message {
+        &Content {
+          width: 100%;
+        }
+      }
+    }
+    &__logo {
+      margin-bottom: 10px;
+    }
+    &__avatar {
+      width: 34px;
+      height: 34px;
+      margin-left: 10px;
+    }
+    &Content {
+      width: calc(100% - 44px);
+      &__top {
+        margin-bottom: 12px;
+      }
+      &__tools {
+        button {
+          width: 12px;
+          height: 12px;
+          margin-right: 12px;
+        }
+      }
+      &__info {
+        hr {
+          margin: 0 8px;
+        }
+      }
+      &__text {
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  @include header-sm-md;
+  @include alerts-sm-md;
+  @include assistant-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  // @include hero-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  @include header-xsm-sm;
+  @include sidebar-xsm-sm;
+  @include chat-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  // @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}
